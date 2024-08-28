@@ -97,6 +97,11 @@ body {
     border-bottom-right-radius: 5vh;
     border: none;
     background-color: rgb(14, 71, 85);
+    transition: all 0.4s ease;
+}
+
+.container button:active {
+    transform: scale(0.9);
 }
 
 .container button hr {

@@ -40,7 +40,9 @@ let resultText;
         document.getElementById('score').textContent = `${correctAnswers}`;
     } else {
         resultText = `Sbagliato! Era ${countryNames.join(' o ')}.`;
+        correctAnswers = 0;
     }
+    document.getElementById('score').textContent = `${correctAnswers}`; // Aggiorna il punteggio
     document.getElementById('result').textContent = resultText;
     currentFlagCode = displayRandomFlag(); // Mostra una nuova bandiera
     document.getElementById('guess-input').value = ''; // Pulisci l'input
@@ -96,7 +98,7 @@ function getCountryNames(code) {
         "bd": ["Bangladesh"],
         "pk": ["Pakistan"],
         "lk": ["Sri Lanka"],
-        "mm": ["Birmania"],
+        "mm": ["Birmania", "Myanmar"],
         "la": ["Laos"],
         "kh": ["Cambogia"],
         "mn": ["Mongolia"],
